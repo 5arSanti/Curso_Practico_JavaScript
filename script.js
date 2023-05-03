@@ -18,20 +18,17 @@ function sumarInputValues(event) {
 }
 */
 
-form.addEventListener("click", sumarInputValues);
+form.addEventListener("mouseover", enviarFormulario)
 
-function sumarInputValues(event) {
-    //console.log(event);
-    //event.preventDefault(); 
-    const sumaInputs = Number(input1.value) + Number(input2.value);
-    pResult.innerText = "Resultado: " + sumaInputs;
+function enviarFormulario(e){
+    e.preventDefault();
+
+    alert("virus")
 }
 
-texto.addEventListener("mouseover", textoCambiado);
-function textoCambiado(){
-    texto.innerText = "Como Estas";
-}
-texto.addEventListener("mouseout", textoCambiado2);
-function textoCambiado2(){
-    texto.innerText = "hola";
+form.addEventListener("mouseout", enviarFormulario2)
+
+function enviarFormulario2(e){
+    e.preventDefault();
+    alert("Has sido hackeado");
 }
